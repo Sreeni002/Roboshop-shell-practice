@@ -22,7 +22,7 @@ echo -e "\e[36m>>>>>>>>>>>>>>>>>Install NodeJs Dependencies<<<<<<<<<<<<<<<<<<\e[
 npm install
 
 echo -e "\e[36m>>>>>>>>>>>>>>>>>Create systemd file<<<<<<<<<<<<<<<<<<\e[0m"
-cp /home/centos/Roboshop-shell-practice/R_Catalogue.service /etc/systemd/system/R_Catalogue.service
+cp /root/Roboshop-shell-practice/R_Catalogue.service /etc/systemd/system/R_Catalogue.service
 
 echo -e "\e[36m>>>>>>>>>>>>>>>>>Load system service<<<<<<<<<<<<<<<<<<\e[0m"
 systemctl daemon-reload
@@ -30,7 +30,7 @@ systemctl enable R_Catalogue
 systemctl restart R_Catalogue
 
 echo -e "\e[36m>>>>>>>>>>>>>>>>>Install Mongodb repo <<<<<<<<<<<<<<<<<<\e[0m"
-cp /home/centos/Roboshop-shell-practice/mongo.repo /etc/yum.repos.d/mongo.repo
+cp /root/Roboshop-shell-practice/mongo.repo /etc/yum.repos.d/mongo.repo
 
 echo -e "\e[36m>>>>>>>>>>>>>>>>>Install Mongodb client <<<<<<<<<<<<<<<<<<\e[0m"
 yum install mongodb-org-shell -y
