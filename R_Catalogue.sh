@@ -26,8 +26,8 @@ cp /home/centos/Roboshop-shell-practice/R_Catalogue.service /etc/systemd/system/
 
 echo -e "\e[36m>>>>>>>>>>>>>>>>>Load system service<<<<<<<<<<<<<<<<<<\e[0m"
 systemctl daemon-reload
-systemctl enable catalogue
-systemctl restart catalogue
+systemctl enable R_Catalogue
+systemctl restart R_Catalogue
 
 echo -e "\e[36m>>>>>>>>>>>>>>>>>Install Mongodb repo <<<<<<<<<<<<<<<<<<\e[0m"
 cp /home/centos/Roboshop-shell-practice/mongo.repo /etc/yum.repos.d/mongo.repo
