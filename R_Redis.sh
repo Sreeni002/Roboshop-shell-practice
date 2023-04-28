@@ -1,8 +1,14 @@
+echo -e "\e[36m>>>>>>>>>>>>>>>>>Install Remi<<<<<<<<<<<<<<<<<<\e[0m"
 yum install https://rpms.remirepo.net/enterprise/remi-release-8.rpm -y
+
+echo -e "\e[36m>>>>>>>>>>>>>>>>>enable  Redis 6.2 version<<<<<<<<<<<<<<<<<<\e[0m"
 dnf module enable redis:remi-6.2 -y
 yum install redis -y
 #update the listen address in the below files
-cp redis.conf /etc/redis.conf
-cp redis.conf /etc/redis/redis.conf
+
+echo -e "\e[36m>>>>>>>>>>>>>>>>>Update Listen adress of redis server<<<<<<<<<<<<<<<<<<\e[0m"
+sed -i -e 's|127.0.0.1|0.0.0.0|' /etc/redis.com
+
+echo -e "\e[36m>>>>>>>>>>>>>>>>>Enable and start redis<<<<<<<<<<<<<<<<<<\e[0m"
 systemctl enable redis
 systemctl start redis
