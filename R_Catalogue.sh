@@ -4,6 +4,7 @@ echo -e "\e[36m>>>>>>>>>>>>>>>>>Install NodeJs<<<<<<<<<<<<<<<<<<\e[0m"
 yum install nodejs -y
 echo -e "\e[36m>>>>>>>>>>>>>>>>>Create user roboshop<<<<<<<<<<<<<<<<<<\e[0m"
 useradd roboshop
+rm -rf /app
 mkdir /app
 echo -e "\e[36m>>>>>>>>>>>>>>>>>Download app content<<<<<<<<<<<<<<<<<<\e[0m"
 curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip
