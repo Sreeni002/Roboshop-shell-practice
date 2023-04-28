@@ -14,7 +14,7 @@ unzip /tmp/catalogue.zip
 echo -e "\e[36m>>>>>>>>>>>>>>>>>Install NodeJs Dependencies<<<<<<<<<<<<<<<<<<\e[0m"
 npm install
 echo -e "\e[36m>>>>>>>>>>>>>>>>>Create systemd file<<<<<<<<<<<<<<<<<<\e[0m"
-cp /home/centos/Roboshop-shell-practice/catalogue.service /etc/systemd/system/catalogue.service
+cp /home/centos/Roboshop-shell-practice/R_Catalogue.service /etc/systemd/system/R_Catalogue.service
 
 echo -e "\e[36m>>>>>>>>>>>>>>>>>Load system service<<<<<<<<<<<<<<<<<<\e[0m"
 systemctl daemon-reload
