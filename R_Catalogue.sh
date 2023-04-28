@@ -14,14 +14,17 @@ unzip /tmp/catalogue.zip
 echo -e "\e[36m>>>>>>>>>>>>>>>>>Install NodeJs Dependencies<<<<<<<<<<<<<<<<<<\e[0m"
 npm install
 echo -e "\e[36m>>>>>>>>>>>>>>>>>Create systemd file<<<<<<<<<<<<<<<<<<\e[0m"
-cp catalogue.service /etc/systemd/system/catalogue.service
+cp /home/centos/Roboshop-shell-practice/catalogue.service /etc/systemd/system/catalogue.service
+
 echo -e "\e[36m>>>>>>>>>>>>>>>>>Load system service<<<<<<<<<<<<<<<<<<\e[0m"
 systemctl daemon-reload
-echo -e "\e[36m>>>>>>>>>>>>>>>>>Enable catalogue service<<<<<<<<<<<<<<<<<<\e[0m"
 systemctl enable catalogue
-echo -e "\e[36m>>>>>>>>>>>>>>>>>Restart catalogue service<<<<<<<<<<<<<<<<<<\e[0m"
 systemctl restart catalogue
-echo -e "\e[36m>>>>>>>>>>>>>>>>>Install Mongodb<<<<<<<<<<<<<<<<<<\e[0m"
+
+echo -e "\e[36m>>>>>>>>>>>>>>>>>Install Mongodb client <<<<<<<<<<<<<<<<<<\e[0m"
+cp /home/centos/Roboshop-shell-practice/mongo.repo /etc/yum.repos.d/mongo.repo
+
+echo -e "\e[36m>>>>>>>>>>>>>>>>>Install Mongodb client <<<<<<<<<<<<<<<<<<\e[0m"
 yum install mongodb-org-shell -y
 echo -e "\e[36m>>>>>>>>>>>>>>>>>Load schema<<<<<<<<<<<<<<<<<<\e[0m"
 mongo --host mongodb-dev.sreenivasulareddydevops.online </app/schema/catalogue.js
