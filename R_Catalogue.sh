@@ -1,10 +1,10 @@
 echo -e "\e[36m>>>>>>>>>>>>>>>>>Setup NodeJs<<<<<<<<<<<<<<<<<<\e[0m"
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
+
 echo -e "\e[36m>>>>>>>>>>>>>>>>>Install NodeJs<<<<<<<<<<<<<<<<<<\e[0m"
 yum install nodejs -y
+
 echo -e "\e[36m>>>>>>>>>>>>>>>>>Create user roboshop<<<<<<<<<<<<<<<<<<\e[0m"
-
-
 useradd roboshop
 
 echo -e "\e[36m>>>>>>>>>>>>>>>>>Create App directory<<<<<<<<<<<<<<<<<<\e[0m"
